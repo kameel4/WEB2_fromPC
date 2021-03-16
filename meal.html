@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Заказ школьного питания</h1>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.klass.label }}<br>
+        {{ form.klass(class="form-control", type="string") }}<br>
+    </p>
+    <p>
+        {{ form.bufet.label }}<br>
+        {{ form.bufet(class="form-control", type="integer") }}<br>
+    </p>
+    <p>
+        {{ form.hot_meal.label }}<br>
+        {{ form.hot_meal(class="form-control", type="integer") }}<br>
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    {{message}}
+</form>
+{% endblock %}
