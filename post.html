@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="get" enctype="multipart/form-data">
+    {% if form.ans1.data == 6 %}
+    <div> Первый ответ верный</div>
+    {% endif %}
+    <br>
+    {% if form.ans2.data == 110 %}
+    <div> Второй ответ верный</div>
+    {% endif %}
+</form>
+{% endblock %}
